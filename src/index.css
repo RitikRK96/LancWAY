@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #212121;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+}
+
+.menu-btn {
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  display: none;
+}
+
+ul.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu links */
+ul.menu li {
+  margin: 0 10px;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+ul.menu li a.active,
+ul.menu li a:hover {
+  background-color: #48CFCB;
+  border-radius: 5px;
+}
+
+.conHead {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .conHead {
+    display: block;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .buttonhead {
+    display: none;
+  }
+
+  ul.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #212121;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+
+  ul.menu.active {
+    display: block;
+  }
+
+  ul.menu li {
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+  }
+
+  ul.menu li a {
+    display: block;
+  }
+}
