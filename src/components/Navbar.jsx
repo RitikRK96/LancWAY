@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faDisplay, faTimes } from '@fortawesome/free-solid-svg-icons';
-import '../index.css'; 
+import '../index.css';
 import '../app.css'; 
+import logo from '../assets/Lanc.png';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,9 +14,9 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="logo">Brand</div>
-
-            
+            <div className="logo">
+                <img src={logo} alt="Lancway Logo" />
+            </div>
 
             {/* Navigation Menu */}
             <ul className={`menu ${menuOpen ? 'active' : ''}`}>
